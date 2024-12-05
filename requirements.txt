@@ -1,0 +1,5 @@
+cachetools
+jsonpickle
+requests
+aiokafka
+websockets
