@@ -1,5 +1,5 @@
-cachetools
-jsonpickle
-requests
-aiokafka
-websockets
+cachetools==5.4.0
+jsonpickle==3.2.2
+requests==2.32.3
+aiokafka==0.11.0
+websockets==12.0
