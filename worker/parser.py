@@ -3,7 +3,7 @@ logger = logging.getLogger('Worker.Parser')
 
 import time, jsonpickle
 
-from tokenizer import Tokenizer, MinerConfig
+from tokenizer import Tokenizer
 
 class Parser:
 
@@ -26,9 +26,7 @@ class Parser:
         return self.templates.get(sample, {'active': True})['active']
 
     async def getTokenizer(self):
-        #TODO: review instantiation of Tokenizer class//implement using MinerConfig
         if not self.tokenizer:
-            self.config : MinerConfig = jsonpickle.decode((await self.api.get('/workers/drain'))['content'].replace('service.', 'tokenizer.'), keys = True)
             self.tokenizer = Tokenizer()
         return self.tokenizer
 
