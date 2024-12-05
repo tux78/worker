@@ -1,0 +1,17 @@
+services:
+  ##################################
+  # Public Worker
+  ##################################
+  worker:
+    image: worker:latest
+    hostname: worker
+    build: .
+    ports:
+      - "514:514"
+    expose:
+      - "514"
+    command:
+      - --manager
+      - "manager"
+      - "8000"
+      - "[Enter your appID here.]"    
