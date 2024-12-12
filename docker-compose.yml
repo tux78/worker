@@ -11,7 +11,5 @@ services:
     expose:
       - "514"
     command:
-      - --manager
-      - "manager"
-      - "8000"
+      - --appID
       - "[Enter your appID here.]"    
