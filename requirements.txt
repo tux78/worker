@@ -3,3 +3,4 @@ jsonpickle==3.2.2
 requests==2.32.3
 aiokafka==0.11.0
 websockets==12.0
+python-dateutil==2.9.0.post0
